@@ -1,4 +1,6 @@
 class Pessoa:
+    olhos = 2
+
     def __init__(self, *filhos, nome=None, idade=45 ):
         self.nome = nome
         self.idade = idade
@@ -15,7 +17,7 @@ if __name__ == "__main__":
     print(p.cumprimentar())  # chamada do método
     print(p.nome)  # acesso ao parâmetro
     for filho in p.filhos:
-    print(filho.nome)
+        print(filho.nome)
     p.sobrenome = "Carmelita de Lisieux Mol"  # cria o atributo dinamicamente
     f.sobrenome = "Lisieux Leal e Mol"
 
@@ -23,3 +25,6 @@ if __name__ == "__main__":
     print(f.__dict__)
 
     del p.sobrenome   # deleta o atributo
+    p.olhos = 1
+    print(Pessoa.olhos)
+    print(p.olhos)
