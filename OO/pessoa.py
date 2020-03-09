@@ -16,3 +16,10 @@ if __name__ == "__main__":
     print(p.nome)  # acesso ao parâmetro
     for filho in p.filhos:
     print(filho.nome)
+    p.sobrenome = "Carmelita de Lisieux Mol"  # cria o atributo dinamicamente
+    f.sobrenome = "Lisieux Leal e Mol"
+
+    print(p.__dict__)
+    print(f.__dict__)
+
+    del p.sobrenome   # deleta o atributo
